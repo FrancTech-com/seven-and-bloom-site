@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patricia Lamaro — Personal Journal</title>
+  <meta name="description" content="Patricia Lamaro — Makerere IST student, baker at heart, and future traveller.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="sab-bar"><a href="../seven-and-bloom.html">← Seven &amp; Bloom</a><span>Patricia’s Blog</span></div>
+  <nav class="site-nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand">Patricia <span class="dot"></span></a>
+      <div class="nav-links">
+        <a href="index.html" class="active">About</a>
+        <a href="cooking.html">Cooking</a>
+        <a href="travelling.html">Travelling</a>
+      </div>
+      <button class="theme-btn" id="themeToggle" aria-label="Toggle dark mode" title="Toggle light/dark mode">☾</button>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="reveal">
+          <p class="hero-label">NAME: LAMARO PATRICIA · REG NO: 25/U/03844/PS</p>
+          <h1>About <em>Me</em></h1>
+          <p class="lead">Am Patricia Lamaro, studying at Makerere University pursing Bachelors of Information System and Technolgy</p>
+          <p>I love my degree, its interesting, outgoing, challenging and brings you to your last limit everytime.But thats what l love about it mostly. it doesnt give you room for comfort at all.</p>
+        </div>
+        <div class="hero-photo-wrap reveal">
+          <img src="images/profile.jpg" alt="Patricia Lamaro" class="hero-photo">
+          <div class="hero-note">Big dreams &amp; good food ♡</div>
+          <div class="float-badge">IST · Makerere</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2>interest</h2>
+          <div class="line"></div>
+        </div>
+        <div class="card reveal" style="max-width:740px">
+          <p>Since am still studying and most of my time and mind is to finish my degree excellently. l have few things in mind as per my time right now but l definitely have alot for my future and life.</p>
+          <details class="read-more">
+            <summary>Read more</summary>
+            <div class="details-body">
+              <p>My other interest at heart education wise is to do my masters degree and find what l love most about my career path because its kinda wide honeslty. I want to do what l feel is my most interest and do best so it doesnt become a job or burden.</p>
+              <p>There is another thing a job which you wake up every morning just to sustain a living and get money to because you need it but also there is this which l also want not just a job but doing what l love that makes it not feel like a job because your so good at it you dont care if its hard or easy because you chose it willingly and money follows you because of your best work at hand and heart. Now thats my total interest.</p>
+            </div>
+          </details>
+        </div>
+
+        <div class="vibes reveal">
+          <div class="vibe">
+            <div class="icon">🎓</div>
+            <strong>Student life</strong>
+            <span>IST at Makerere — pushing limits every day</span>
+          </div>
+          <div class="vibe">
+            <div class="icon">🍰</div>
+            <strong>Kitchen magic</strong>
+            <span>Cooking is jazz. Baking is science.</span>
+          </div>
+          <div class="vibe">
+            <div class="icon">✈</div>
+            <strong>Next stops</strong>
+            <span>Spain · Italy · Singapore · Greece</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:1rem">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2>Hobbies</h2>
+          <div class="line"></div>
+        </div>
+        <p class="muted reveal" style="margin-bottom:0.4rem;max-width:36rem">I will give you a glaced into my life about the things l love in the world and i will show in a little detail so enjoy</p>
+
+        <div class="hobby-grid">
+          <a href="cooking.html" class="hobby-tile reveal">
+            <img src="images/cake-chocolate.jpg" alt="Chocolate cake">
+            <h3>COOKING</h3>
+            <p>From baking to sizzling pans — the heart of the kitchen</p>
+            <span class="go">Open the kitchen →</span>
+          </a>
+          <a href="travelling.html" class="hobby-tile reveal">
+            <img src="images/air-city.jpg" alt="View from the plane">
+            <h3>TRAVELLING</h3>
+            <p>Clouds, cultures, and new perspectives around the world</p>
+            <span class="go">See the journey →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span class="script">Patricia’s little corner of the internet</span>
+      <p>Makerere University · Information Systems &amp; Technology</p>
+    </div>
+  </footer>
+
+  <script>
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+    setTimeout(() => document.querySelectorAll('.hero .reveal').forEach(el => el.classList.add('visible')), 80);
+    // Theme toggle
+    (function(){
+      const btn=document.getElementById('themeToggle');
+      const key='patricia-theme';
+      const saved=localStorage.getItem(key);
+      if(saved==='dark'){document.body.classList.add('dark');btn.textContent='☀';}
+      btn.addEventListener('click',()=>{
+        document.body.classList.toggle('dark');
+        const isDark=document.body.classList.contains('dark');
+        btn.textContent=isDark?'☀':'☾';
+        localStorage.setItem(key,isDark?'dark':'light');
+      });
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travelling — Patricia Lamaro</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="sab-bar"><a href="../seven-and-bloom.html">← Seven &amp; Bloom</a><span>Patricia’s Blog</span></div>
+  <nav class="site-nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand">Patricia <span class="dot"></span></a>
+      <div class="nav-links">
+        <a href="index.html">About</a>
+        <a href="cooking.html">Cooking</a>
+        <a href="travelling.html" class="active">Travelling</a>
+      </div>
+      <button class="theme-btn" id="themeToggle" aria-label="Toggle dark mode" title="Toggle light/dark mode">☾</button>
+    </div>
+  </nav>
+
+  <main>
+    <section class="page-hero travel">
+      <div class="container reveal">
+        <p class="label">Hobby</p>
+        <h1>OHH TRAVELLING</h1>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0.4rem">
+      <div class="narrow reveal">
+        <p>there is nothing in this world the beats seeing around the world and watching different things exploring a whole different perspective than yours.</p>
+        <br>
+        <p>The one thing l love about travelling especially with Air, are the clouds OMG. Being so close to the close is like am sitting on it and its amazing though hectic sitting in one position for hours.</p>
+      </div>
+    </section>
+
+    <div class="photo-row reveal">
+      <img src="images/air-city.jpg" alt="City from the plane">
+      <img src="images/air-clouds-1.jpg" alt="Clouds">
+      <img src="images/place-lawn.jpg" alt="Open green spaces">
+    </div>
+
+    <section class="section">
+      <div class="band">
+        <div class="container">
+          <div class="two-col reverse">
+            <div class="reveal">
+              <img src="images/food-burger-drinks.jpg" alt="Food while travelling">
+            </div>
+            <div class="reveal">
+              <p>l love different taste of food,  different culture , weather, the people is just a wonderful feeling moving all over the world 
+              I have visited a few countries in Africa and my next stop is Europe and Asian
+              Especially</p>
+              <ul class="dest-list">
+                <li>Spain</li>
+                <li>Italy</li>
+                <li>singapore</li>
+                <li>Greece</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="gallery four reveal">
+          <img src="images/place-resort.jpg" alt="Resort">
+          <img src="images/place-pool.jpg" alt="Pool">
+          <img src="images/air-clouds-2.jpg" alt="More clouds">
+          <img src="images/friends-grass.jpg" alt="Friends outdoors">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span class="script">Patricia’s little corner of the internet</span>
+      <p>Makerere University · Information Systems &amp; Technology</p>
+    </div>
+  </footer>
+
+  <script>
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+    setTimeout(() => document.querySelectorAll('.page-hero .reveal').forEach(el => el.classList.add('visible')), 60);
+    (function(){
+      const btn=document.getElementById('themeToggle');
+      const key='patricia-theme';
+      const saved=localStorage.getItem(key);
+      if(saved==='dark'){document.body.classList.add('dark');btn.textContent='☀';}
+      btn.addEventListener('click',()=>{
+        document.body.classList.toggle('dark');
+        const isDark=document.body.classList.contains('dark');
+        btn.textContent=isDark?'☀':'☾';
+        localStorage.setItem(key,isDark?'dark':'light');
+      });
+    })();
+  </script>
+</body>
+</html>

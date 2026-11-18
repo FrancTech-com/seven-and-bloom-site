@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gloria’s Corner — Learn · Build · Create · Grow</title>
+<meta name="description" content="Gloria’s Corner: a Makerere IST student’s journey through business, food, life and faith.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%99%A1%3C/text%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Dancing+Script:wght@600;700&family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--plum:#4a1a5c;--deep:#2e0f3a;--lav:#e9dbf3;--lav2:#f6eefb;--ink:#2a1633;--mut:#6d5a78;--gold:#f7cd6b;--bg:#fcf9fd;--line:#e6d8ef}
+*{box-sizing:border-box;margin:0}html{scroll-behavior:smooth}
+body{font:400 15px/1.6 Inter,system-ui,sans-serif;color:var(--ink);background:var(--bg)}
+img{display:block;max-width:100%}a{color:inherit}
+.script{font-family:'Dancing Script',cursive}.hand{font-family:Caveat,cursive;color:var(--plum)}
+h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.15}
+section,footer{scroll-margin-top:90px}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+nav{position:sticky;top:0;z-index:20;background:var(--plum);color:#fff;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.4rem 1.5rem;padding:.7rem 1.5rem}
+.logo{text-decoration:none}.logo b{font:700 1.8rem/1.1 'Dancing Script',cursive;display:block}.logo small{font-size:.58rem;letter-spacing:.22em;opacity:.85}
+nav ul{display:flex;gap:1.3rem;list-style:none;padding:0;overflow-x:auto;max-width:100%}
+nav li a{text-decoration:none;font-size:.85rem;white-space:nowrap}nav li a:hover{color:var(--gold)}
+.hero{background:linear-gradient(100deg,var(--lav2),var(--lav));display:grid;grid-template-columns:1.15fr .85fr;gap:1.5rem;align-items:end;padding:2.4rem 1.5rem 0;overflow:hidden}
+.hero h1{font:700 clamp(2.4rem,5vw,3.6rem)/1.1 'Dancing Script',cursive;color:var(--plum);margin-bottom:.8rem}
+.hero p{max-width:34rem;margin-bottom:1rem}.hero .thx{font-size:1.7rem;padding-bottom:2rem}
+.art{position:relative;justify-self:center;width:min(340px,100%)}
+.art img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 20%;border-radius:999px 999px 0 0;box-shadow:0 0 0 10px rgba(255,255,255,.55)}
+.art .hand{position:absolute;top:8%;right:-6%;font-size:1.5rem;line-height:1.15;background:rgba(255,255,255,.85);padding:.5rem .9rem;border-radius:12px;transform:rotate(4deg);max-width:11rem}
+.tiles{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;padding:1.4rem 1.5rem}
+.tile{position:relative;isolation:isolate;aspect-ratio:3/4;border-radius:14px;overflow:hidden;color:#fff;text-decoration:none;display:flex;flex-direction:column;justify-content:flex-end;gap:.15rem;padding:1rem;background:var(--deep)}
+.tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.tile::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(to top,rgba(46,15,58,.95) 8%,rgba(46,15,58,.35) 60%,rgba(46,15,58,.1))}
+.tile h3{font-size:1.35rem}.tile span{font-size:.8rem;opacity:.92}
+.tile i{font-style:normal;align-self:flex-start;margin-top:.6rem;background:var(--gold);color:var(--deep);font-size:.78rem;font-weight:600;padding:.35rem .8rem;border-radius:99px}
+.tile:hover img{transform:scale(1.04)}.tile img{transition:transform .4s}
+.wrap{padding:0 1.5rem;margin:1.2rem 0}
+.biz{border:1px solid var(--line);border-radius:16px;background:#fff;padding:1.6rem}
+.biz-top{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;align-items:center;margin-bottom:1.3rem}
+.biz h2{font-size:clamp(2rem,4.5vw,3rem);color:var(--deep)}.biz .hand{font-size:1.7rem}
+.biz-top p{color:var(--mut)}
+.shots{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem}
+.shots figure img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:10px}
+.shots figcaption{padding-top:.6rem;font-size:.85rem;color:var(--mut)}.shots figcaption b{display:block;font:600 1.1rem 'Playfair Display',serif;color:var(--plum)}
+.book{display:inline-block;margin-top:.5rem;font-size:1.5rem;text-decoration:none;border-bottom:2px solid var(--gold)}
+.contact-line{margin-top:1.1rem;font-size:.85rem;color:var(--mut)}
+.sec-h{display:flex;align-items:baseline;gap:1rem;margin-bottom:1rem}.sec-h h2{font-size:1.9rem;color:var(--deep)}.sec-h hr{flex:1;border:0;border-top:1px solid var(--line)}
+.posts{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:1rem}
+.post{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;padding:0;text-align:left;font:inherit;cursor:pointer;color:inherit}
+.post img{width:100%;aspect-ratio:4/3;object-fit:cover}.post div{padding:.6rem .75rem .8rem;font-size:.82rem}
+.post small{display:block;color:var(--mut);margin-top:.3rem}
+.band{background:var(--plum);color:#fff;border-radius:16px;padding:1.6rem;display:flex;flex-wrap:wrap;gap:.5rem 2rem;align-items:center;justify-content:space-between}
+.band h2{font-size:1.9rem}.band p{opacity:.9}.band .hand{color:var(--gold);font-size:1.6rem}
+.deep{color:var(--mut);margin-bottom:1.3rem}.deep p{margin-bottom:.7rem;max-width:52rem}.deep .chips{margin-top:.8rem}
+.school{background:var(--lav2);border-radius:16px;padding:1.4rem}.school header{display:flex;align-items:center;gap:1rem;flex-wrap:wrap;margin-bottom:1rem}.school header img{height:54px;width:auto;mix-blend-mode:multiply}.school h2{font:700 2.4rem "Dancing Script",cursive;color:var(--deep)}
+.school-pics{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem}.school-pics img{width:100%;height:220px;object-fit:cover;border-radius:10px}
+.sg{grid-template-columns:repeat(5,1fr)}.sg div{background:#fff;border:1px solid var(--line)}.sg b{color:var(--plum)}
+.life{background:var(--plum);color:#fff;border-radius:16px;padding:1.6rem}.life h2{font-size:1.9rem;margin-bottom:.6rem}.life>p{max-width:52rem;opacity:.95}
+.life-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:1.2rem}.life-grid div{background:rgba(255,255,255,.1);border-radius:12px;padding:1rem;font-size:.88rem}.life-grid b{display:block;font:600 1.15rem "Playfair Display",serif;color:var(--gold);margin-bottom:.3rem}
+.about{display:grid;grid-template-columns:220px 1fr;gap:1.6rem;align-items:start}.about p{margin-bottom:.8rem;max-width:42rem}.about .sign{font-size:1.7rem;margin:.4rem 0 0}
+.about img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:50%;box-shadow:0 0 0 8px var(--lav)}
+.about h2{font-size:1.9rem;color:var(--deep);margin-bottom:.5rem}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.8rem}.chips span{background:var(--lav);border-radius:99px;padding:.25rem .8rem;font-size:.8rem}
+footer{background:var(--deep);color:#fff;margin-top:2rem;padding:1.6rem 1.5rem;display:flex;flex-wrap:wrap;gap:1rem 2rem;align-items:center;justify-content:space-between}
+footer .logo b{font-size:1.6rem}footer .tag{font:600 1.4rem 'Dancing Script',cursive;color:var(--gold)}
+footer nav{all:unset}footer .links{display:flex;gap:1.2rem;flex-wrap:wrap;font-size:.9rem}footer small{flex-basis:100%;text-align:center;opacity:.7;font-size:.75rem}
+.lb{position:fixed;inset:0;background:rgba(30,10,40,.88);display:none;align-items:center;justify-content:center;z-index:50;padding:1rem}.lb.on{display:flex}
+.lb figure{max-width:min(560px,100%);max-height:100%;color:#fff;text-align:center}.lb img{max-height:78vh;margin:0 auto;border-radius:10px}.lb figcaption{padding-top:.7rem}
+.lb button{position:absolute;top:1rem;right:1rem;background:#fff;border:0;border-radius:50%;width:2.4rem;height:2.4rem;font-size:1.3rem;cursor:pointer}
+@media(max-width:860px){.hero,.biz-top,.about{grid-template-columns:1fr}.tiles{grid-template-columns:1fr 1fr}.tile:last-child{grid-column:1/-1;aspect-ratio:2/1}
+.shots{grid-template-columns:1fr}.life-grid,.sg{grid-template-columns:1fr 1fr}.school-pics{grid-template-columns:1fr}.school-pics img{height:180px}.art{width:min(300px,86%)}.art .hand{right:-4%}.about{grid-template-columns:1fr}.about img{width:160px}.hero .thx{padding-bottom:0}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.tile img{transition:none}}
+.sab-bar{background:#2e0f3a;color:#fff;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 18px;font-size:14px;font-weight:600;font-family:Inter,system-ui,sans-serif}.sab-bar a{color:#fff;text-decoration:none;background:rgba(255,255,255,.16);padding:7px 14px;border-radius:99px;white-space:nowrap;font-size:13px}.sab-bar a:hover{background:rgba(255,255,255,.28)}.sab-bar span{opacity:.9;font-size:14px}
+/* Dark mode */
+body.dark{--plum:#c9a8e0;--deep:#1a0f22;--lav:#2a1a35;--lav2:#22162c;--ink:#f3eef6;--mut:#b5a5c0;--gold:#f0cf92;--bg:#1a1220;--line:#3a2a45;background:var(--bg);color:var(--ink)}
+body.dark nav{background:#24182c}
+body.dark .hero{background:linear-gradient(100deg,#22162c,#2a1a35)}
+body.dark .sab-bar{background:#1a0f22}
+body.dark footer{background:#1a0f22}
+.theme-btn{background:rgba(255,255,255,.16);border:0;color:#fff;width:36px;height:36px;border-radius:50%;cursor:pointer;font-size:1rem;display:grid;place-items:center;transition:background .2s;flex-shrink:0}
+.theme-btn:hover{background:rgba(255,255,255,.28)}
+</style></head><body>
+<div class="sab-bar"><a href="../seven-and-bloom.html">← Seven &amp; Bloom</a><span>Gloria’s Corner</span></div>
+<nav>
+<a class="logo" href="#top"><b>Gloria’s Corner ♡</b><small>LEARN · BUILD · CREATE · GROW</small></a>
+<ul><li><a href="#top">Home</a></li><li><a href="#about">About Me</a></li><li><a href="#business">Business</a></li><li><a href="#school">School</a></li><li><a href="#food">Food</a></li><li><a href="#life">Life &amp; Faith</a></li><li><a href="#contact">Contact</a></li></ul>
+<button class="theme-btn" id="themeToggle" aria-label="Toggle dark mode" title="Toggle light/dark mode">☾</button>
+</nav>
+<header class="hero" id="top">
+<div><h1>Hi, I’m Gloria ♡</h1>
+<p>Welcome to my little corner of the internet! I’m a Makerere University IST student, a young entrepreneur, a food lover, and a dreamer with big plans. Here I share snippets of my journey — from campus life and business hustle, to good food, real moments and the lessons I’m learning along the way.</p>
+<p class="hand thx">Thanks for being here ♡</p></div>
+<div class="art"><img src="images/portrait-hero.jpg" alt="Gloria smiling over her shoulder in a colourful dress"><div class="hand">Big dreams, consistent effort, beautiful results. ♡</div></div>
+</header>
+<main>
+<div class="tiles">
+<a class="tile" href="#business"><img src="images/biz-dispensers.jpg" alt=""><h3>Business</h3><span>Tropical Twist Juice &amp; other big ideas</span><i>Read More</i></a>
+<a class="tile" href="#school"><img src="images/school-tech.jpg" alt=""><h3>School</h3><span>IST journey, study tips, projects &amp; more</span><i>Read More</i></a>
+<a class="tile" href="#food"><img src="images/food-hearty-plate.jpg" alt=""><h3>Food</h3><span>Recipes, market days, food adventures</span><i>Read More</i></a>
+<a class="tile" href="#life"><img src="images/school-city-night.jpg" alt="" style="object-position:50% 85%"><h3>Life &amp; Faith</h3><span>Growth, faith, relationships, wellness &amp; more</span><i>Read More</i></a>
+<a class="tile" href="#about"><img src="images/portrait-about.jpg" alt=""><h3>About Me</h3><span>My story, goals, values &amp; dreams</span><i>Read More</i></a>
+</div>
+
+<section class="wrap" id="business"><div class="biz">
+<div class="biz-top"><div><small>Featured business</small><h2>Tropical Twist Juice</h2><div class="hand">Freshness with a twist ♡</div></div>
+<div><p>Tropical Twist Juice is my small business where I turn fresh fruits into refreshing, natural juices. We serve flavour, energy and good vibes at market days, functions, parties and events. It’s more than juice — it’s a lifestyle!</p><a class="book hand" href="https://wa.me/256709056542?text=Hi%20Gloria%2C%20I%27d%20like%20to%20book%20Tropical%20Twist%20Juice" target="_blank" rel="noopener">Book us! ♡</a></div></div>
+<div class="deep"><p>Tropical Twist is an idea that is growing into something real, one event at a time. Every glass starts with real fruit, blended into natural juices — Pineapple Mint, Mango Coconut, Passion Fruit and Watermelon Beetroot are some of our favourites.</p>
+<p>I love the setting just as much as the juice: glass dispensers, mason jars with straws, fresh flowers and a styled table that makes the juice stand part of the celebration. Whether it’s a wedding, a graduation, a baby shower or a busy market day, we bring colour, freshness and good energy.</p>
+<p>Running a business while studying has taught me to plan, to handle challenges and to keep showing up. I share those lessons here as the journey continues.</p>
+<div class="chips"><span>Weddings</span><span>Graduations</span><span>Birthdays</span><span>Baby showers</span><span>Prom parties</span><span>Kwanjulas</span><span>Receptions</span><span>Market days</span><span>Corporate events</span></div></div>
+<div class="shots">
+<figure><img src="images/biz-floral-setup.jpg" alt="White floral juice stand with dispensers" style="object-position:50% 70%"><figcaption><b>Elegant &amp; Fresh</b>Perfect for weddings, functions, birthdays, corporate events and more.</figcaption></figure>
+<figure><img src="images/biz-flyer.jpg" alt="Tropical Twist Juice flyer"><figcaption><b>Our Flavours</b>Pineapple Mint, Mango Coconut, Passion Fruit &amp; Watermelon Beetroot.</figcaption></figure>
+<figure><img src="images/biz-dispensers.jpg" alt="Juice dispensers and mason jars on a white table"><figcaption><b>Events &amp; More</b>Graduations, birthdays, weddings, baby showers, prom parties, market days and more.</figcaption></figure></div>
+<p class="contact-line">Call or WhatsApp 0709056542 / 0788950219 · <a href="mailto:glorialauryne176@gmail.com">glorialauryne176@gmail.com</a></p>
+</div></section>
+
+<section class="wrap" id="food"><div class="sec-h"><h2>Latest Food Posts</h2><hr></div><p class="deep" style="max-width:52rem">Food is where I slow down and enjoy life. This space is a diary of the plates I love — everyday favourites like posho with greens and avocado salad, beef stew with matoke, beans and chapati, and dishes steamed in banana leaves, alongside hearty rice-and-noodle plates and quick breakfasts for busy mornings. Expect meals, market days, recipes and small food adventures, because good food is one of the simplest ways to bring people together. Tap any post to see it full size.</p><div class="posts" id="posts"></div></section>
+
+<section class="wrap" id="school"><div class="school">
+<header><img src="images/school-makerere-crest.jpg" alt="Makerere University crest"><div><h2>School</h2><small>Makerere University | Information Systems &amp; Technology</small></div><span class="hand" style="margin-left:auto;font-size:1.5rem">Study today, build tomorrow ♡</span></header>
+<div class="deep"><p>School is where my tech journey takes shape. I’m studying Information Systems and Technology at Makerere University, a course that sits where people, business and technology meet. I’m passionate about technology and its power to solve real-world problems, and campus is where I’m building the skills to do just that.</p>
+<p>This section is my study diary: what I’m learning, the projects and assignments that stretch me, and what university life is really like — the challenges, the little wins and the new possibilities I keep discovering.</p></div>
+<div class="school-pics"><img src="images/school-tech.jpg" alt="Technology and global network illustration"><img src="images/school-city-night.jpg" alt="City lights at night" style="object-position:50% 90%"></div>
+<div class="life-grid sg"><div><b>Study Tips</b>What helps me stay organised and consistent, shared in case it helps you too.</div><div><b>Projects &amp; Assignments</b>A look at what I’m building and learning, and how classroom ideas turn into real skills.</div><div><b>Campus Life</b>Life around Makerere beyond lectures — the people, the places and the moments that turn into memories.</div><div><b>Opportunities</b>Programmes and chances to grow that I find along the way, and how I go after them.</div><div><b>My Journey</b>The bigger picture: who I’m becoming through university, one step at a time.</div></div>
+</div></section>
+
+<section class="wrap" id="life"><div class="life"><h2>Life &amp; Faith</h2>
+<p>This is the heart of Gloria’s Corner. Life isn’t only business and books — it’s the quiet moments, the conversations, the prayers and the lessons in between. Here I write about growing into myself: what I’m learning, what I’m trusting God for, and how I’m choosing to show up each day.</p>
+<div class="life-grid"><div><b>Growth</b>Becoming is a process. I share lessons, little wins and the not-so-perfect days that shape who I’m becoming.</div><div><b>Faith</b>Faith keeps me steady when I don’t have everything figured out. I trust God with the bigger picture and write about what that looks like day to day.</div><div><b>Relationships</b>Family, friends and meaningful connections make life beautiful. I reflect on love, friendship and the people who help me grow.</div><div><b>Wellness</b>Looking after my mind, body and heart so I can keep dreaming and building: rest, balance and small habits that help.</div></div>
+<p class="hand" style="color:var(--gold);font-size:1.5rem;margin:1rem 0 0">Grateful. Focused. Blessed ♡ <small style="font:.8rem Inter;color:#fff;opacity:.8">Posts are coming soon.</small></p></div></section>
+
+<section class="wrap" id="about"><div class="about"><img src="images/portrait-about.jpg" alt="Portrait of Gloria in front of red curtains"><div><h2>About Me ♡</h2><p>Hey, I’m Gloria — a girl with big dreams and a heart full of possibilities.</p><p>I’m a Makerere University student pursuing Information Systems and Technology, a young entrepreneur, a food lover, and a creative soul who believes that life is about more than simply existing — it’s about learning, growing, creating, and becoming.</p><p>I’m passionate about technology and its power to solve real-world problems, but I’m also drawn to the little things that make life beautiful: good food, meaningful relationships, faith, personal growth, and moments that turn into memories.</p><p>Through my entrepreneurial journey, I’m learning to turn ideas into something real, embrace challenges, and build something meaningful from the ground up. Through university, I’m discovering new possibilities, developing my skills, and learning more about the person I want to become.</p><p>My journey isn’t about having everything figured out. It’s about showing up, learning from my experiences, celebrating the little wins, and trusting God with the bigger picture.</p><p>Gloria’s Corner is my little space to document it all — the lessons, the dreams, the business ideas, the adventures, the faith, the food, and the beautiful, sometimes messy process of growing into myself.</p><p>I’m still becoming, still dreaming, and still writing my story. And there’s so much more to come.</p><p class="hand sign">One girl. Many dreams. A life still unfolding. ♡</p><div class="chips"><span>🏫 Makerere University</span><span>💻 Information Systems &amp; Technology</span><span>📍 Uganda</span></div></div></div></section>
+</main>
+
+<footer id="contact">
+<a class="logo" href="#top"><b>Gloria’s Corner ♡</b><small>LEARN · BUILD · CREATE · GROW</small></a>
+<div class="tag">Same girl. Bigger dreams. ♡</div>
+<div class="links"><a href="https://wa.me/256709056542" target="_blank" rel="noopener">WhatsApp</a><a href="mailto:glorialauryne176@gmail.com">Let’s Connect</a><a href="../seven-and-bloom.html">← Seven &amp; Bloom</a></div>
+<small>© 2026 Gloria’s Corner. All rights reserved.</small>
+</footer>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Food post"><button aria-label="Close" id="x">×</button><figure><img id="li" alt=""><figcaption id="lc"></figcaption></figure></div>
+<script>
+const posts=[
+["food-hearty-plate","A Hearty Plate: Rice, Noodles & Chicken","Oct 20, 2026"],
+["food-posho-juice","Posho, Leafy Greens, Avocado Salad & Fresh Juice","Oct 12, 2026"],
+["food-beef-stew","Beef Stew, Matoke & Greens","Oct 5, 2026"],
+["food-banana-leaf","Steamed in Banana Leaves","Oct 1, 2026"],
+["food-beans-chapati","Beans & Chapati","Sep 25, 2026"],
+["food-cereal","Quick Breakfast: Cereal & Milk","Sep 18, 2026"]];
+const $=id=>document.getElementById(id);
+$("posts").innerHTML=posts.map((p,i)=>`<button class="post" data-i="${i}"><img src="images/${p[0]}.jpg" alt="${p[1]}" loading="lazy"><div>${p[1]}<small>${p[2]}</small></div></button>`).join("");
+const close=()=>$("lb").classList.remove("on");
+$("posts").onclick=e=>{const b=e.target.closest(".post");if(!b)return;const p=posts[b.dataset.i];$("li").src="images/"+p[0]+".jpg";$("li").alt=p[1];$("lc").textContent=p[1]+" · "+p[2];$("lb").classList.add("on");$("x").focus()};
+$("x").onclick=close;$("lb").onclick=e=>{if(e.target.id==="lb")close()};document.onkeydown=e=>{if(e.key==="Escape")close()};
+/* Theme toggle */
+(function(){
+  const btn=document.getElementById('themeToggle');
+  const key='gloria-theme';
+  const saved=localStorage.getItem(key);
+  if(saved==='dark'){document.body.classList.add('dark');btn.textContent='☀';}
+  btn.addEventListener('click',()=>{
+    document.body.classList.toggle('dark');
+    const isDark=document.body.classList.contains('dark');
+    btn.textContent=isDark?'☀':'☾';
+    localStorage.setItem(key,isDark?'dark':'light');
+  });
+})();
+</script></body></html>

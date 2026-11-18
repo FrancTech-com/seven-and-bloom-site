@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cooking — Patricia Lamaro</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="sab-bar"><a href="../seven-and-bloom.html">← Seven &amp; Bloom</a><span>Patricia’s Blog</span></div>
+  <nav class="site-nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand">Patricia <span class="dot"></span></a>
+      <div class="nav-links">
+        <a href="index.html">About</a>
+        <a href="cooking.html" class="active">Cooking</a>
+        <a href="travelling.html">Travelling</a>
+      </div>
+      <button class="theme-btn" id="themeToggle" aria-label="Toggle dark mode" title="Toggle light/dark mode">☾</button>
+    </div>
+  </nav>
+
+  <main>
+    <section class="page-hero">
+      <div class="container reveal">
+        <p class="label">Hobby</p>
+        <h1>MY HEART BEAT</h1>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0.4rem">
+      <div class="narrow reveal">
+        <p>Imagine coming home after a long day of classes, walking into the kitchen and turning simple ingredients into a master piece of different flavors.</p>
+        <p>whether you are tossing vegetables into a sizzling pan or watching a loaf of bread rise through the oven glass, working with food  is one of the most rewarding things you can do.</p>
+        <p>while many people  group them together and find it a chore, cooking and baking are actually two different forms of art.</p>
+      </div>
+    </section>
+
+    <div class="photo-row reveal">
+      <img src="images/baked-muffins.jpg" alt="Fresh muffins">
+      <img src="images/baked-donuts.jpg" alt="Decorated donuts">
+      <img src="images/cake-chocolate.jpg" alt="Chocolate cake">
+    </div>
+
+    <section class="section">
+      <div class="container">
+        <div class="two-col">
+          <div class="reveal">
+            <h2>cooking: The art of freedom and expression of different taste</h2>
+            <p>Cooking is like jazz music. its all about improvisation, tasting as you do and trusting your gut . when you make soup or sauce, a stir-fry or pasta dish, you do not have to follow the rules perfectly or add each and everything in it. you did do what makes you love and enjoy the dish more and more.</p>
+          </div>
+          <div class="reveal">
+            <img src="images/food-wings-fries.jpg" alt="Wings and fries">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="band">
+        <div class="container">
+          <div class="reveal">
+            <h3>BAKING: the science of precision and Patience</h3>
+            <p>If cooking is an art, baking  is definitely a science. Baking requires chemical reactions</p>
+          </div>
+
+          <ul class="feature-list">
+            <li class="reveal">
+              <strong>Exact measurements:</strong>
+              Missing a half-teaspoon of baking powder or adding too much flour can turn it to a dense brick.
+            </li>
+            <li class="reveal">
+              <strong>The waiting game:</strong>
+              unlike cooking, you cannot taste a cake while its in the oven, you have to trust the recipe and wait for the timer to go off .
+            </li>
+            <li class="reveal">
+              <strong>The reward:</strong>
+              there is nothing quite like the magic of watching simple ingredients like flour , eggs , sugar transform into beautiful pastries.
+            </li>
+          </ul>
+
+          <div class="gallery reveal">
+            <img src="images/baked-cinnamon-rolls.jpg" alt="Cinnamon rolls">
+            <img src="images/baked-pastries.jpg" alt="Pastries">
+            <img src="images/cake-flowers.jpg" alt="Decorated cake">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="narrow reveal">
+        <h3>Healing power of the kitchen</h3>
+        <p>Beyond the delicious rewards, spending time in the kitchen is incredible for your mental well-being. it fotces you to step away from your phone, classes assignments, and focus entirely on the present moment.<br>
+        chopping vegetable can be deeply therapeutic and kneading dough is an amazing way to relieve stress after a toug exam.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0.3rem">
+      <div class="narrow reveal">
+        <div style="height:3px;background:linear-gradient(90deg,transparent,var(--blush),var(--peach),var(--blush),transparent);margin-bottom:1.8rem;border-radius:2px"></div>
+        <h3>Conclusion</h3>
+        <p>At the end of the day, cooking fills your heart but baking feeds your soul. cooking teaches you horw to be flexible and creative, while baking teaches you patience and  precision<br>
+        Both are essential skills that make my life much sweeter and alot more flavorful</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span class="script">Patricia’s little corner of the internet</span>
+      <p>Makerere University · Information Systems &amp; Technology</p>
+    </div>
+  </footer>
+
+  <script>
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+    setTimeout(() => document.querySelectorAll('.page-hero .reveal').forEach(el => el.classList.add('visible')), 60);
+    (function(){
+      const btn=document.getElementById('themeToggle');
+      const key='patricia-theme';
+      const saved=localStorage.getItem(key);
+      if(saved==='dark'){document.body.classList.add('dark');btn.textContent='☀';}
+      btn.addEventListener('click',()=>{
+        document.body.classList.toggle('dark');
+        const isDark=document.body.classList.contains('dark');
+        btn.textContent=isDark?'☀':'☾';
+        localStorage.setItem(key,isDark?'dark':'light');
+      });
+    })();
+  </script>
+</body>
+</html>
